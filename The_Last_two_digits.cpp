@@ -12,20 +12,18 @@ int main()
 {
     Naba;
 
-    vector<ll> v;
+ 
     ll p = 1;
     for (int i = 0; i < 4; i++)
     {
         int x;  cin >> x;
-        v.push_back(x);
 
-        p *= v[i];
-        p %= mod;
+        p *= x;
+        p %= 100;
     }
+    
  
-    string s = to_string(p) ;
-
-    cout << s[s.size() - 2] <<  s[s.size() - 1] << nl;
+    p < 10 ? cout << "0" << p << nl : cout << p << nl;
 
     return 0;
 }
